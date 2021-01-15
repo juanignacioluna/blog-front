@@ -1,0 +1,38 @@
+
+<div id="blog">
+
+  <h1 id="title">BLOG</h1>
+
+  <textarea id="addTextarea" cols="30" rows="10"></textarea>
+
+  <br>
+
+  <button (click)="send($event)" id="send">SEND</button>
+
+  <br>
+
+
+
+
+    <div *ngFor="let posteo of posteos">
+
+      <div class="posteo">
+
+        <button (click)="borrar($event)" id={{posteo.id}} class="borrar"><i class="fas fa-trash-alt"></i></button>
+
+        <button (click)="editar($event)" name={{posteo.id}} class="editar"><i class="fas fa-pen"></i></button>
+
+        <p class={{posteo.id}}>{{posteo.mensaje}}</p>
+
+      </div>
+
+      <br>
+
+    </div>
+
+
+
+
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,7 @@
+{
+    "/api/*": {
+        "target": "http://localhost/pruebasLARAVEL/blog01/back/public",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}
