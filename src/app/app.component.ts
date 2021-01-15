@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
 
   getMensajes(){
 
-    fetch('http://localhost/pruebasLARAVEL/blog01/back/public/api/blog')
+    fetch('https://blog-back-01.herokuapp.com/api/blog')
     .then(res => res.json())
     .then(json => this.posteos=json)
 
@@ -39,7 +39,7 @@ export class AppComponent implements OnInit {
 
     const data = { id: event.target.attributes.id.nodeValue };
 
-    fetch('http://localhost/pruebasLARAVEL/blog01/back/public/api/blog/'+event.target.attributes.id.nodeValue, {
+    fetch('https://blog-back-01.herokuapp.com/api/blog/'+event.target.attributes.id.nodeValue, {
       method: 'DELETE', // or 'PUT'
       headers: {
         'Content-Type': 'application/json',
@@ -83,7 +83,7 @@ export class AppComponent implements OnInit {
 
           const data = { mensaje: $('textarea[name$="'+event.target.attributes.name.nodeValue+'"]').val()};
 
-          fetch('http://localhost/pruebasLARAVEL/blog01/back/public/api/blog/'+ event.target.attributes.name.nodeValue, {
+          fetch('https://blog-back-01.herokuapp.com/api/blog/'+ event.target.attributes.name.nodeValue, {
             method: 'PUT', 
             headers: {
               'Content-Type': 'application/json',
@@ -121,7 +121,7 @@ export class AppComponent implements OnInit {
 
       const data = { mensaje: (<HTMLInputElement>document.getElementById("addTextarea")).value };
 
-      fetch('http://localhost/pruebasLARAVEL/blog01/back/public/api/blog', {
+      fetch('https://blog-back-01.herokuapp.com/api/blog', {
         method: 'POST', 
         headers: {
           'Content-Type': 'application/json',
